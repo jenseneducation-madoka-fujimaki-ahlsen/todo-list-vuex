@@ -15,10 +15,10 @@ export default new Vuex.Store({
       state.todos = state.todos.filter(todo => todo.id != id);
     },
     toggleThisTodo(state, todo) {
-      state.todos.filter(t => t.id == todo.id).done = !todo.done;
+      state.todos.filter(t => (t.id = todo.id))[0].done = !todo.done;
     },
     updateThisTodo(state, { todo, newContent }) {
-      state.todos.filter(t => t.id == todo.id).content = newContent;
+      state.todos.filter(t => (t.id = todo.id))[0].content = newContent;
     }
   },
   actions: {
